@@ -1,0 +1,479 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+@font-face {
+    font-family: 'vazir';
+    src: url(./Vazir-Medium-FD-WOL.ttf);
+}
+:root{
+    --color-primary: #CC312D;         
+    --color-secondary: #2F0D0C;     
+    --color-accent: #FFF4F8;        
+    --color-light: #ffffff;
+    --bg-color:#F7F7F7;           
+    --bg-color2:#E6E6E6;           
+    --text-primary: #130505;          
+    --text-secondary: #606060;       
+    --radius-lg: 1.6rem;             
+}
+body{
+    display: flex;
+    justify-content: center;
+    padding: 10rem;
+    font-family: 'vazir';
+    
+}
+main{
+    border-radius: var(--radius-lg);
+    padding: 3.4rem 2.4rem;
+    border-color: var(--bg-color);
+    border-width: 0.15rem;
+    border-style: solid;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 100%;
+    max-width: 1312px;
+}
+.info-sec h2 span{
+    font-size: 1.4rem !important;
+    font-weight: 100;
+}
+.info-sec{
+    padding: 1rem;
+}
+.info-sec hr{
+    margin-top: 3rem;
+    background-color: var(--bg-color);
+    height: 2px;
+    border: 0;
+}
+.shop-sec hr{
+    margin-top: 3rem;
+    background-color: var(--bg-color2);
+    height: 2px;
+    border: 0;
+}
+.shop-sec{
+    padding: 1rem;
+}
+.shop-sec h2 span{
+    font-size: 1.4rem !important;
+    font-weight: 100;
+}
+.addres-sec{
+    margin-top: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+}
+.my-inputs ,select{
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background-color: var(--bg-color);
+    border-radius: var(--radius-lg);
+    border: none;
+    margin-top: 0.8rem;
+    resize: none; /* برای ثابت نگه داشتن اندازه textarea */
+}
+.addres-sec form{
+    display: flex;
+   gap: 1.6rem;
+   margin-top: 2rem;
+}
+.addres-sec  form div{
+   width: 50%;
+   
+}
+.info-add-getter{
+    margin-top: 1rem;
+}
+.location-info{
+    display: flex;
+   gap: 1.6rem;
+   margin-top: 2rem;
+}
+.location-info div{
+    width: 50%;
+}
+.detail-address {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    margin-top: 2rem;
+  }
+  
+  /* دو فیلد بالا در یک ردیف */
+  .detail-address > div {
+    flex: 1 1 45%;
+  }
+  
+  /* فیلد نشانی کل عرض را بگیرد */
+  .detail-address .address-field {
+    flex: 1 1 100%;
+  }
+  .addres-getter-sec{
+    display: flex;
+    justify-content: space-between;
+  }
+  .addres-getter-sec div{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .addres-getter-sec div h3{
+    color: var(--color-primary);
+  }
+  .choose-send{
+    display: flex;
+    justify-content: space-between;
+  }
+  .choose-send span{
+    background-color:#E5303F1A;
+    padding: 0.8rem 1.6rem;
+    color: var(--color-primary);
+    border-radius: var(--radius-lg);
+  }
+  .choose-send h3{
+    font-size: 1.2rem;
+    font-weight: 100;
+  }
+  .choose-send h3 strong{
+    font-size: 1.8rem;
+  }
+  .radio-label{
+    padding: 0.8rem 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    border-radius: var(--radius-lg);
+  }
+  .delivery-sec{
+    display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 1.6rem;
+  }
+  .radio-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-color);
+    padding: 1.2rem 1.6rem;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: 0.25s ease;
+    border: 1px solid transparent;
+  }
+  
+  /* حالت hover برای حس کلیک */
+  .radio-label:hover {
+    border-color: var(--color-primary);
+  }
+  
+  .radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    position: relative;
+  }
+  
+  /* حذف ظاهر پیش‌فرض */
+  .radio-option input[type="radio"] {
+    display: none;
+  }
+  
+  /* مربع */
+  .radio-option .checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-primary);
+    border-radius: 4px;
+    background-color: #fff;
+    position: relative;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* حالت انتخاب‌شده: رنگ مربع و تیک */
+  .radio-option input[type="radio"]:checked + .checkmark {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+  
+  /* تیک داخل مربع */
+  .radio-option input[type="radio"]:checked + .checkmark::after {
+    content: "✔";
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    transition: 0.2s ease;
+  }
+  
+  /* انیمیشن ظاهر شدن تیک */
+  .radio-option .checkmark::after {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  
+  /* 🎯 حذف پس‌زمینه‌ی کل کارت وقتی تیک خورد */
+  .radio-option input[type="radio"]:checked ~ span,
+  .radio-option input[type="radio"]:checked:focus-visible ~ span,
+  .radio-option input[type="radio"]:checked:focus-visible ~ .checkmark {
+    background-color: transparent;
+  }
+  
+  /* یا ساده‌تر با انتخاب label کلی */
+  .radio-option input[type="radio"]:checked
+    + .checkmark
+    + span
+    {
+    background-color: transparent;
+  }
+  
+  /* بهترین راه (با انتخاب label): */
+  .radio-label:has(input[type="radio"]:checked) {
+    background-color: transparent !important;
+    border-color: var(--color-primary);
+  }
+  .radio-label p span{
+    color: var(--text-secondary);
+  }
+  .delivery-type{
+    margin-top: 3rem;
+  }
+  .shop-sec{
+    background-color: var(--bg-color);
+    border-radius: var(--radius-lg);
+    padding: 2.4rem;
+  }
+  .product-basket{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+  .img-sec{
+    background-color: var(--color-light);
+    border-radius: 12px;
+  }
+  .img-sec img{
+    width: 100%;
+    
+  }
+  .info-product{
+    display: flex;
+    justify-content: space-between;
+  }
+  .info-product p{
+    font-weight: 600;
+  }
+  .info-product p span{
+    color: var(--text-secondary);
+    
+  }
+  .product-deatail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .price-sec{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .price-sec p{
+    font-size: 1.4rem;
+  }
+  .price-sec p span{
+   color: var(--text-secondary);
+   font-size: 1rem;
+  }
+  .amount{
+    display: flex;
+    gap: 0.3rem;
+  }
+  .amount div{
+    background-color: var(--color-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    
+  }
+  .amount-num{
+    background-color: transparent !important;
+    border: 2px solid var(--bg-color2);
+  }
+  .buy-sec{
+    padding: 1.6rem;
+    background-color: var(--color-light);
+    border-radius: 12px;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .buy-sec hr{
+    margin-top: 0rem !important;
+  }
+  .buy-me{
+    display: flex;
+    justify-content: space-between;
+  }
+  .buy-me p,h3 span{
+    color: var(--text-secondary);
+    font-size: 1rem;
+  }
+  .text-muted{
+    color: var(--text-secondary);
+  }
+  .Payment-gateway{
+    background-color: var(--color-light);
+    border-radius: 1.2rem;
+    padding: 1.6rem 1.2rem;
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+  }
+  .btn-payment{
+    padding: 1.6rem 0.8rem;
+    width: 100%;
+    background-color: var(--color-primary);
+    margin-top: 1rem;
+    color: var(--color-light);
+    border: 0;
+    border-radius: 44px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: var(--bg-color) solid 2px;
+  }
+  .btn-payment:hover{
+    background-color: transparent;
+    color: var(--text-primary);
+    cursor: pointer;
+    border: var(--text-secondary) solid 2px;
+    transition: all 0.3s;
+  }
+  @media (max-width: 576px) { 
+    main{
+        grid-template-columns: 1fr !important;
+    }
+    body{
+        padding: 2rem;
+    }
+    .addres-sec form{
+        display: flex;
+     flex-direction: column;
+    }
+    .addres-sec form div{
+        width: 100% !important;
+    }
+    .location-info{
+        display: flex;
+       flex-direction: column;
+    }
+    .location-info div{
+       width: 100% !important;
+    }
+    .delivery-sec{
+        display: grid;
+       grid-template-columns: 1fr !important;
+       
+      }
+      .amount div{
+        background-color: var(--color-light);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 40px;
+        
+      }
+ }
+  @media (max-width: 768px) { 
+    main{
+        grid-template-columns: 1fr !important;
+    }
+    body{
+        padding: 2rem;
+    }
+    .addres-sec form{
+        display: flex;
+     flex-direction: column;
+    }
+    .addres-sec form div{
+        width: 100% !important;
+    }
+    .location-info{
+        display: flex;
+       flex-direction: column;
+    }
+    .location-info div{
+       width: 100% !important;
+    }
+    .delivery-sec{
+        display: grid;
+       grid-template-columns: 1fr !important;
+       
+      }
+      .amount div{
+        background-color: var(--color-light);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+        
+      }
+ }
+ @media (max-width: 992px) { 
+    main{
+        grid-template-columns: 1fr !important;
+    }
+    .amount div{
+        background-color: var(--color-light);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 40px;
+        
+      }
+  }
+  @media (min-width: 1200px) { 
+    main{
+        grid-template-columns: 2fr 1fr !important;
+    }
+    .amount div{
+        background-color: var(--color-light);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 40px;
+        
+      }
+  
+   }
