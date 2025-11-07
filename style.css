@@ -375,6 +375,7 @@ main{
   @media (max-width: 576px) { 
     main{
         grid-template-columns: 1fr !important;
+        padding: 1.4rem 0.4rem;
     }
     body{
         padding: 2rem;
@@ -476,4 +477,5 @@ main{
         
       }
   
+
    }
